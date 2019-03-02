@@ -24,7 +24,7 @@ Summary: The Linux kernel
 %global zipsed -e 's/\.ko$/\.ko.xz/'
 %endif
 
-# define buildid .local
+%define buildid .local
 
 # baserelease defines which build revision of this kernel version we're
 # building.  We used to call this fedora_build, but the magical name
@@ -42,7 +42,7 @@ Summary: The Linux kernel
 # For non-released -rc kernels, this will be appended after the rcX and
 # gitX tags, so a 3 here would become part of release "0.rcX.gitX.3"
 #
-%global baserelease 200
+%global baserelease 222
 %global fedora_build %{baserelease}
 
 # base_sublevel is the kernel version we're starting with and patching
@@ -642,6 +642,9 @@ Patch510: CVE-2019-8980.patch
 
 # rhbz 1683382
 Patch511: nfsv4.1-avoid-false-retries.patch
+
+# ck
+Patch512: 0001-MultiQueue-Skiplist-Scheduler-version-v0.185_2.patch 
 
 # END OF PATCH DEFINITIONS
 
@@ -1914,6 +1917,72 @@ fi
 #
 #
 %changelog
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-222.local
+- Disable debugging options.
+
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-221.local
+- Disable debugging options.
+
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-220.local
+- Disable debugging options.
+
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-219.local
+- Disable debugging options.
+
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-218.local
+- Disable debugging options.
+
+* Sat Mar 02 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-217.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-216.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-215.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-214.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-213.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-212.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-211.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-210.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-209.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-208.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-207.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-206.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-205.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-204.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-203.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-202.local
+- Disable debugging options.
+
+* Fri Mar 01 2019 Edoardo Vacchi <uncommonnonsense@gmail.com> - 4.20.13-201.local
+- Disable debugging options.
+
 * Wed Feb 27 2019 Justin M. Forbes <jforbes@fedoraproject.org> - 4.20.13-200
 - Linux v4.20.13
 - Fix for NFS issue (rhbz 1683382)
